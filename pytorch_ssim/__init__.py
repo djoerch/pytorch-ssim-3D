@@ -43,7 +43,7 @@ def _ssim(img1, img2, window, window_size, channel, size_average = True):
     else:
         return ssim_map.mean(1).mean(1).mean(1)
     
-def _ssim_3D(img1, img2, window, window_size, channel, size_average = True):
+def _ssim3D(img1, img2, window, window_size, channel, size_average = True):
     mu1 = F.conv3d(img1, window, padding = window_size//2, groups = channel)
     mu2 = F.conv3d(img2, window, padding = window_size//2, groups = channel)
 
