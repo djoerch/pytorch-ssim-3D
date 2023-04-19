@@ -140,4 +140,4 @@ def ssim3D(img1, img2, window_size = 11, size_average = True):
         window = window.cuda(img1.get_device())
     window = window.type_as(img1)
     
-    return _ssim_3D(img1, img2, window, window_size, channel, size_average)
+    return _ssim3D(img1, img2, window, window_size, channel, size_average)
